@@ -13,6 +13,7 @@ public class CustomizedSceneController : MonoBehaviour
     public GameObject JigsawElements;
 
     public Text[] LevelHighScoresTexts;
+    public Text[] ThreelevelTexts; //(0,2,4)
 
     public static CustomizedSceneController instance;
 
@@ -67,6 +68,19 @@ public class CustomizedSceneController : MonoBehaviour
         for (int i = 0; i<LevelHighScoresTexts.Length; i++)
         {
             LevelHighScoresTexts[i].text = "Best: " + DataController.Instance.GetHighScores()[i] + "s";
+            if(i == 0)
+            {
+                ThreelevelTexts[0].text = "Best: " + DataController.Instance.GetHighScores()[i] + "s";
+            }
+
+            else if(i == 2)
+            {
+                ThreelevelTexts[1].text = "Best: " + DataController.Instance.GetHighScores()[i] + "s";
+            }
+            else if(i == 4)
+            {
+                ThreelevelTexts[2].text = "Best: " + DataController.Instance.GetHighScores()[i] + "s";
+            }
         }
     }
 

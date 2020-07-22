@@ -12,7 +12,7 @@ public class CustomizedLevelButton : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        GetComponentInChildren<Text>().text = "Level " + id;
+        //GetComponentInChildren<Text>().text = "Level " + id;
 
 
     }

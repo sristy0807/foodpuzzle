@@ -12,7 +12,8 @@ public class DataController : Singleton<DataController>
     {
         DontDestroyOnLoad(gameObject);
         LoadPlayerProgress();
-        Invoke("LoadNewScene", 2.0f);
+        //Invoke("LoadNewScene", 2.0f);
+        LoadNewScene();
     }
 
     void LoadNewScene()
